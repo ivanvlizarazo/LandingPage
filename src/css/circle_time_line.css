@@ -1,0 +1,67 @@
+
+.menu-btn {
+  background: #0060A9;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+	transition: background .3s;
+  z-index: 2;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, .3);
+}
+
+.menu-btn, .icons-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-delay: .1s;
+}
+.menu-btn span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #333;
+  margin-bottom: 5px;
+  transition: background .3s, transform .3s;
+}
+.menu-btn span:last-child {
+  margin-bottom: 0;
+}
+.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.active span:nth-child(2) {
+  opacity: 0;
+}
+.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -5px);
+}
+
+.icons {
+  position: relative;
+}
+.icon {
+  position: absolute;
+  top: calc(50% - 35px);
+  left: calc(50% - 35px);
+  background: #6AFFA5;
+  cursor: pointer;
+  /* transform: translate(0px, 0px); */
+  /* z-index: 1; */
+  
+}
+.icon:hover {
+  background: #DA7071;
+}
+.icon:hover .fa {
+  color: #272C2C;
+}
+.fa {
+  margin: auto;
+  color: #DA7071;
+  font-size: 30px;
+}
+
